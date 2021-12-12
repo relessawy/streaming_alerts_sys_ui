@@ -1,0 +1,30 @@
+<div class="card-deck" *ngIf="route.children.length === 0 ">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Procurement Manager View</h4>
+  
+        <div class="row employeeRow">
+          <div class="col-lg-2 employeePhoto">
+            <img
+              src="../../assets/img/ProcurementManager.png"
+              alt="pm-img"
+              width="100%"
+            />
+          </div>
+          <div class="col-lg-6 colDesc">
+            <p>This is the Procurement Manager view. A manager can:</p>
+            <ul>
+              <li>
+                Request an offer
+              </li>
+              <li>Manually approve an offer</li>
+              <li>or view created order</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <router-outlet></router-outlet>
+  

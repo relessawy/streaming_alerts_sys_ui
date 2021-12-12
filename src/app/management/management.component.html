@@ -1,0 +1,73 @@
+<div class="card-deck">
+  <div class="card tutorialCard">
+    <div class="card-header">Manually Approve Offer</div>
+    <div class="card-body">
+      <div class="card-text" *ngIf="task === null">
+        Please claim and start a task from the
+        <a routerLink="../task" routerLinkActive="nav-link-primary"> Tasks </a>
+      </div>
+      <div class="card-text" *ngIf="task !== null">
+        <div>
+          <label class="cardDesc" for="laptopname">
+            This order could not be auto-approved. Please review order details.
+          </label>
+        </div>
+        <div id="userinput">
+          <div class="row">
+            <div class="col inputCol">
+              <div >
+                <div class="userInputItem">
+                  <label>Requested Laptop : </label>{{ task["laptop"] }}
+                </div>
+                <div class="userInputItem">
+                  <label>Target Price : </label>{{ task["targetPrice"] }}
+                </div>
+                <div class="userInputItem"> 
+                  <label>Supplier Price : </label>{{ task["supplierPrice"] }}
+                </div>
+                <div class="userInputItem">
+                  <label>Urgency : </label>{{ task["urgency"] }}
+                </div>
+              </div>
+              <!-- Approval -->
+              <div class="form-group userInputItem">
+                <label for="urgency">Approve Order ? </label>
+
+                <span class="btn-group">
+                  <label class="btn btn-secondary" (click)="selectedYes()">
+                    <input
+                      type="radio"
+                      name="areyousure"
+                      value="Yes"
+                      [checked]="true"
+                      id="areyousure"
+                    />
+                    Yes </label
+                  ><label class="btn btn-secondary" (click)="selectedNo()">
+                    <input
+                      type="radio"
+                      name="areyousure"
+                      value="No"
+                      id="areyousure"
+                    />
+                    No
+                  </label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-row mb-3">
+          <button
+            type="button"
+            class="btn btn-primary ml-1 submit-btn"
+            (click)="management()"
+          >
+            Approve Order <i class="fas fa-chevron-circle-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

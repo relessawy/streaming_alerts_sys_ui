@@ -1,0 +1,89 @@
+<div class="card-deck">
+  <div class="card tutorialCard">
+    <div class="card-body">
+      <h4 class="card-title">Welcome</h4>
+      <div class="row tutorialRow">
+        <div class="col-lg-5 tutorialColSel">
+          <ul class="card-text colDesc">
+            <li>
+              This is the user interface (UI) for the
+              <em>Streaming Alerts System</em>
+            </li>
+          </ul>
+          <!-- Alert Name -->
+          <div class="row userInputItem">
+            <div class="col-lg-5">
+              <label for="Alert Name">Alert Name: </label>
+            </div>
+            <div class="col-lg-5">
+              <input
+                type="string"
+                [(ngModel)]="alertName"
+                placeholder="Alert Name"
+              />
+            </div>
+          </div>
+          <!-- Threshold -->
+          <div class="row userInputItem">
+            <div class="col-lg-5">
+              <label for="threshold">Threshold: </label>
+            </div>
+            <div class="col-lg-5">
+              <input
+                type="number"
+                [(ngModel)]="threshold"
+                placeholder="Threshold"
+              />
+            </div>
+          </div>
+          <!-- Location -->
+          <div class="row userInputItem">
+            <div class="col-lg-5">
+              <label for="location">Area of Interest: </label>
+            </div>
+            <div class="col-lg-5">
+              <input
+              type="string"
+              [(ngModel)]="location"
+              placeholder="Location"
+            />
+            </div>
+
+           
+          </div>
+          <!-- Time Interval -->
+          <div class="row userInputItem">
+            <div class="col-lg-5">
+              <label for="startDate">Time Interval: </label>
+            </div>
+            <div class="col-lg-5">
+              <input
+                type="date"
+                [(ngModel)]="startDate"
+                placeholder="Start Date"
+              />
+              <input type="date" [(ngModel)]="endDate" placeholder="End Date" />
+            </div>
+          </div>
+          <div class="submit-section" style="padding: 20px 0px">
+            <button class="btn btn-success submit-btn" (click)="submit()">
+             Submit
+              <i class="fas fa-bolt"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col tutorialColDesc">
+          <div class="imageToCenter">
+            <img
+              src="../../assets/img/s-l1600.jpeg"
+              alt="australiamap-alt"
+              width="70%"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,28 @@
+<div class="card-deck" *ngIf="route.children.length === 0 ">
+  <div class="card tutorialCard">
+    <div class="card-body">
+      <h4 class="card-title">Employee View</h4>
+
+      <div class="row employeeRow">
+        <div class="col-lg-2 employeePhoto">
+          <img
+            src="../../assets/img/Employee.png"
+            alt="employee-img"
+            width="80%"
+          />
+        </div>
+        <div class="col-lg-6 colDesc">
+          <p>This is the employe view. An employee can:</p>
+          <ul>
+            <li>
+              Request a laptop
+            </li>
+            <li>or view created orders</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

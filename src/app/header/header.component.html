@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav mr-auto">
+        <li
+          class="nav-item dropdown d-none d-sm-block"
+          dropdown
+          placement="bottom right"
+        >
+          <a
+            class="nav-link dropdown-toggle app-no-caret"
+            href
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+            dropdownToggle
+            (click)="(false)"
+          >
+            <i class="icon-bell"></i>
+            <span
+              class="badge badge-pill badge-info"
+              *ngIf="messages.length > 0"
+              >{{ messages.length }}</span
+            >
+          </a>
+          <div
+            *dropdownMenu
+            class="dropdown-menu dropdown-menu-right app-scrollable-menu"
+          >
+            <div
+              class="dropdown-header text-center app-pointer"
+              (click)="clear()"
+            >
+              <strong class="app-underline">Clear Messages</strong>
+            </div>
+            <a class="dropdown-item" *ngFor="let item of messages">
+              <fa-icon [icon]="item.className"></fa-icon> {{ item.text }}
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

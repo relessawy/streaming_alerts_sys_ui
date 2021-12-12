@@ -1,0 +1,53 @@
+/* label {
+    display: inline-block;
+    width: 3em;
+    margin: .5em 0;
+    color: #607D8B;
+    font-weight: bold;
+}
+
+input {
+    height: 2em;
+    font-size: 1em;
+    padding-left: .4em;
+} */
+
+.tutorialCard {
+    margin-top: 20px;
+}
+
+.card-header {
+    font-family: Montserrat-Bold;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cardDesc{
+    padding: 10px 20px;
+    font-family: Montserrat-Light;
+    font-size: 1.5rem;
+}
+
+.userInputItem {
+    padding: 10px 20px;
+    font-family: Montserrat-Light;
+    font-size: 1.25rem;
+}
+
+.inputCol {
+    background-color: #EDEDED;
+    padding-top: 10px;
+}
+
+.submit-btn {
+    margin: 20px;
+    width: 200px;
+    border-radius: 25px;
+    font-family: Montserrat-Light;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.btn-group{
+    padding-left: 20px;
+}

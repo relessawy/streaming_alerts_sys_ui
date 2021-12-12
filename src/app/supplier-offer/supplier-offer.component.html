@@ -1,0 +1,56 @@
+<div class="card-deck">
+    <div class="card">
+      <div class="card-header">Requests for Offers</div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered" width="100%">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Request Description</th>
+                <th>Status</th>
+                <th>Created</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Putting the click handler on the row breaks responsive button expansion in mobile view-->
+              <tr *ngFor="let task of tasks | filter : 'Prepare Offer' ">
+                <td>{{ task["task-id"] }}</td>
+                <td>{{ task["task-subject"] }}</td>
+                <td>{{ task["task-status"] }}</td>
+                <td>{{ task["task-created-on"]["java.util.Date"] | date }}</td>
+                <td>
+                  <button
+                    *ngIf="task['task-status'] === 'Ready'"
+                    (click)="claimAndStart(task['task-id'], task['task-name'])"
+                    type="button"
+                    class="btn btn-primary mr-2"
+                  >
+                    Claim
+                  </button>
+                  <button
+                    *ngIf="task['task-status'] === 'Reserved'"
+                    (click)="startTask(task['task-id'], task['task-name'])"
+                    type="button"
+                    class="btn btn-primary mr-2"
+                  >
+                    Start
+                  </button>
+                  <button
+                    *ngIf="task['task-status'] === 'InProgress'"
+                    (click)="go(task['task-id'], task['task-name'])"
+                    type="button"
+                    class="btn btn-success"
+                  >
+                    Go
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  

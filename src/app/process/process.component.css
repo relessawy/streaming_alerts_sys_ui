@@ -1,0 +1,24 @@
+.app-diagram {
+  overflow-x: scroll;
+}
+
+.ordersCard {
+  margin-top: 20px;
+}
+
+.card-header{
+  font-family: Montserrat-Bold;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+thead {
+  font-family: Montserrat-Bold;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+tbody {
+  font-family: Montserrat-Light;
+  font-size: 1.5rem;
+}
