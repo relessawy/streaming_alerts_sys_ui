@@ -24,10 +24,8 @@ export class HomeComponent implements OnInit {
 
   submit() {
     this.kieService.startProcess(this.alertName,this.threshold,this.location,this.startDate,this.endDate).subscribe((res) => {
-      this.messageService.success(`Laptop request submited.`);
-      this.router.navigate(["/home/process"], {
-        queryParams: { refresh: new Date().getTime() },
-      });
+      this.messageService.success(`Subscription submited.`);
+     
     });
   }
 }
