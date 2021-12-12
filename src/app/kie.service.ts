@@ -6,7 +6,7 @@ import { Observable, of } from 'rxjs';
 
 const baseUrl = '/services/rest';
 const processId = 'streaming_alerts_system.subscribe-process';
-const containerId = 'procurement-process_1.0.0-SNAPSHOT';
+const containerId = 'streaming_alerts_system_1.0.0-SNAPSHOT';
 const user = 'rhpam';
 const password = 'redhatpam1!'
 //services/rest/server/containers/procurement-process_1.0.0-SNAPSHOT/processes/procurement-process.OrderAsset/instances
