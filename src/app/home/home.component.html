@@ -43,13 +43,11 @@
             </div>
             <div class="col-lg-5">
               <input
-              type="string"
-              [(ngModel)]="location"
-              placeholder="Location"
-            />
+                type="string"
+                [(ngModel)]="location"
+                placeholder="Location"
+              />
             </div>
-
-           
           </div>
           <!-- Time Interval -->
           <div class="row userInputItem">
@@ -58,16 +56,20 @@
             </div>
             <div class="col-lg-5">
               <input
-                type="date"
+                type="datetime-local"
                 [(ngModel)]="startDate"
                 placeholder="Start Date"
               />
-              <input type="date" [(ngModel)]="endDate" placeholder="End Date" />
+              <input
+                type="datetime-local"
+                [(ngModel)]="endDate"
+                placeholder="End Date"
+              />
             </div>
           </div>
           <div class="submit-section" style="padding: 20px 0px">
             <button class="btn btn-success submit-btn" (click)="submit()">
-             Submit
+              Submit
               <i class="fas fa-bolt"></i>
             </button>
           </div>
