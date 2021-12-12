@@ -29,7 +29,7 @@ const httpOptions: any = {
 export class KieService {
   constructor(private messageService: MessageService, private http: HttpClient) { }
 
-  startProcess(alertName: string, threshold: number, location: string, startDate: Date, endDate: Date): Observable<any> {
+  startProcess(alertName: string, threshold: number, location: string, startDate: string, endDate: string): Observable<any> {
     const url = `${baseUrl}/server/containers/${containerId}/processes/${processId}/instances`;
     const body = {
       alertName: alertName, threshold: threshold, location: location, startDate: startDate, endDate: endDate
