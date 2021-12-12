@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   threshold: number;
   alertName: string;
   location: string;
+
   startDate: Date;
   endDate: Date;
   constructor(
@@ -23,7 +24,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {}
 
   submit() {
-    this.kieService.startProcess(this.alertName,this.threshold,this.location,this.startDate.toISOString().slice(0, 16),this.endDate.toISOString().slice(0, 16),).subscribe((res) => {
+   
+   
+    this.kieService.startProcess(this.alertName,this.threshold,this.location,this.startDate.toString(),this.endDate.toString()).subscribe((res) => {
       this.messageService.success(`Subscription submited.`);
      
     });
